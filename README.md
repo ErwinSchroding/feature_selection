@@ -144,17 +144,6 @@ lvw_selected, lvw_score = lvw_selection(X, y, T=100)  # T: 最大迭代次数
 lasso = LassoCV(cv=5, random_state=42, max_iter=2000)  # cv: 交叉验证折数
 ```
 
-## 📝 生成LaTeX论文
-
-如果需要编译完整的LaTeX论文：
-
-```bash
-# 编译LaTeX（需要安装XeLaTeX）
-xelatex main.tex
-xelatex main.tex  # 运行两次以解决交叉引用
-```
-
-生成的PDF文件：`main.pdf`
 
 ## 🎯 实验流程说明
 
