@@ -207,14 +207,12 @@ def run_experiment():
     print("\n运行Relief算法...")
     start_time = time.time()
     relief_weights = relief_selection(X, y, m=100, k=5)
-    relief_time = time.time() - start_time
-    
     # 选择权重最大的10个特征
     n_features_to_select = 10
     relief_selected = np.argsort(relief_weights)[-n_features_to_select:]
     X_relief = X[:, relief_selected]
-    
     relief_eval = evaluate_features(X_relief, y, 'Relief')
+    relief_time = time.time() - start_time  # 总时间 = 特征选择 + 评估
     relief_eval['time'] = relief_time
     relief_eval['selected_features'] = relief_selected.tolist()
     relief_eval['weights'] = relief_weights[relief_selected].tolist()
@@ -227,10 +225,9 @@ def run_experiment():
     print("\n运行LVW算法...")
     start_time = time.time()
     lvw_selected, lvw_score = lvw_selection(X, y, T=100)
-    lvw_time = time.time() - start_time
-    
     X_lvw = X[:, lvw_selected]
     lvw_eval = evaluate_features(X_lvw, y, 'LVW')
+    lvw_time = time.time() - start_time  # 总时间 = LVW特征选择 + 最终评估
     lvw_eval['time'] = lvw_time
     lvw_eval['selected_features'] = list(lvw_selected)
     lvw_eval['internal_score'] = lvw_score
@@ -243,9 +240,8 @@ def run_experiment():
     print("\n运行Lasso算法...")
     start_time = time.time()
     X_lasso, lasso_selected, lasso_scores = lasso_selection(X, y)
-    lasso_time = time.time() - start_time
-    
     lasso_eval = evaluate_features(X_lasso, y, 'Lasso')
+    lasso_time = time.time() - start_time  # 总时间 = Lasso特征选择 + 评估
     lasso_eval['time'] = lasso_time
     lasso_eval['selected_features'] = lasso_selected.tolist()
     lasso_eval['coefficients'] = lasso_scores[lasso_selected].tolist()

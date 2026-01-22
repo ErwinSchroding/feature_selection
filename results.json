@@ -3,13 +3,13 @@
     "mean_accuracy": 0.9560937742586555,
     "std_accuracy": 0.012339688646904016,
     "n_features": 30,
-    "time": 0.7378499507904053
+    "time": 0.5117549896240234
   },
   "Relief": {
     "mean_accuracy": 0.952553951249806,
     "std_accuracy": 0.017174250475579488,
     "n_features": 10,
-    "time": 0.03446602821350098,
+    "time": 0.43345189094543457,
     "selected_features": [
       6,
       3,
@@ -39,7 +39,7 @@
     "mean_accuracy": 0.9473063188945815,
     "std_accuracy": 0.01657844123770301,
     "n_features": 26,
-    "time": 1.4280898571014404,
+    "time": 1.5722920894622803,
     "selected_features": [
       0,
       1,
@@ -74,7 +74,7 @@
     "mean_accuracy": 0.9578481602235677,
     "std_accuracy": 0.01015802248531395,
     "n_features": 24,
-    "time": 0.1209878921508789,
+    "time": 0.5340750217437744,
     "selected_features": [
       1,
       3,

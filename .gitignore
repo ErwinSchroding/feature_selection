@@ -3,6 +3,8 @@ venv/
 
 河北大学硕士毕业论文自制latex模板/
 
+paper/
+
 # 实验结果文件（可选，如果不想提交）
 # results.json
 # results_table.tex
