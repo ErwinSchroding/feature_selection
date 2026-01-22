@@ -1,0 +1,45 @@
+\begin{table}[H]
+\centering
+\caption{不同特征选择方法的分类准确率对比}
+\label{tab:accuracy}
+\begin{tabular}{lcc}
+\toprule
+\textbf{方法} & \textbf{准确率} & \textbf{标准差} \\
+\midrule
+基准（全部特征） & $0.9561$ & $0.0123$ \\
+Relief & $0.9526$ & $0.0172$ \\
+LVW & $0.9473$ & $0.0166$ \\
+Lasso & $0.9578$ & $0.0102$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{特征选择方法的特征数量和计算时间对比}
+\label{tab:time_features}
+\begin{tabular}{lcc}
+\toprule
+\textbf{方法} & \textbf{选择特征数} & \textbf{计算时间（秒）} \\
+\midrule
+基准（全部特征） & $30$ & $0.7378$ \\
+Relief & $10$ & $0.0345$ \\
+LVW & $26$ & $1.4281$ \\
+Lasso & $24$ & $0.1210$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{特征选择方法的稳定性分析}
+\label{tab:stability}
+\begin{tabular}{lc}
+\toprule
+\textbf{方法} & \textbf{稳定性（Jaccard）} \\
+\midrule
+Relief & $0.7500$ \\
+Lasso & $1.0000$ \\
+\bottomrule
+\end{tabular}
+\end{table}
